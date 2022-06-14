@@ -7,9 +7,10 @@ const Container = styled.div`
   margin-top: 50px;
 `
 const OpenPreview = (data) => {
+  console.log(data)
   return (
     <Container>
-      <LinkPreview url={data} width="300px" height="300px"></LinkPreview>
+      <LinkPreview url={data.url} width="450px" height="300px"></LinkPreview>
     </Container>
   )
 }

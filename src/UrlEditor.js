@@ -29,9 +29,11 @@ const SubmitBtn = styled.button`
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 18px;
 `
 
 const UrlEditor = () => {
+  // URL data
   const [data, setData] = useState('')
 
   return (
