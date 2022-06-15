@@ -9,8 +9,8 @@ import OpenPreview from './OpenPreview'
 function App() {
   const [data, setData] = useState('')
 
-  const onCreate = (url) => {
-    setData(url)
+  const onCreate = (urlData) => {
+    setData(urlData)
   }
 
   return (
