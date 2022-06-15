@@ -12,6 +12,7 @@ function App() {
   const onCreate = (urlData) => {
     setData(urlData)
   }
+  console.log(data)
 
   return (
     <>

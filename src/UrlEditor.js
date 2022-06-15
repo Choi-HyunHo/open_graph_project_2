@@ -43,13 +43,10 @@ const UrlEditor = ({ onCreate }) => {
 
   const handleSubmit = () => {
     getOpenGraph(urlData).then((response) => {
-      onCreate(response.data.url)
+      onCreate(response.data)
       return null
     })
-    //
   }
-
-  console.log(urlData)
 
   return (
     <>
