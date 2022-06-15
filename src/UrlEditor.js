@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import { getOpenGraph } from './api/openGraph/openGraph'
 
 const UrlInputContainer = styled.div`
   margin: 30px 0 0 0;
@@ -41,7 +42,11 @@ const UrlEditor = ({ onCreate }) => {
   const [urlData, setUrlData] = useState('')
 
   const handleSubmit = () => {
-    onCreate(urlData)
+    getOpenGraph(urlData).then((response) => {
+      onCreate(response.data.url)
+      return null
+    })
+    //
   }
 
   console.log(urlData)
