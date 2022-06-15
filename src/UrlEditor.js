@@ -29,6 +29,11 @@ const SubmitBtn = styled.button`
   font-weight: bold;
   cursor: pointer;
   font-size: 18px;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 20px rgba(128, 128, 128, 0.4);
+  }
 `
 
 const UrlEditor = ({ onCreate }) => {
