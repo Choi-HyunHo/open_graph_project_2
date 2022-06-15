@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import OpenPreview from './OpenPreview'
 
 const UrlInputContainer = styled.div`
   margin: 30px 0 0 0;
@@ -32,9 +31,15 @@ const SubmitBtn = styled.button`
   font-size: 18px;
 `
 
-const UrlEditor = () => {
+const UrlEditor = ({ onCreate }) => {
   // URL data
-  const [data, setData] = useState('')
+  const [urlData, setUrlData] = useState('')
+
+  const handleSubmit = () => {
+    onCreate(urlData)
+  }
+
+  console.log(urlData)
 
   return (
     <>
@@ -42,14 +47,13 @@ const UrlEditor = () => {
         <UrlInputStyle
           type="url"
           placeholder="https://"
-          value={data}
+          value={urlData}
           onChange={(e) => {
-            setData(e.target.value)
+            setUrlData(e.target.value)
           }}
         />
       </UrlInputContainer>
-      <SubmitBtn>확인</SubmitBtn>
-      <OpenPreview url={data}></OpenPreview>
+      <SubmitBtn onClick={handleSubmit}>확인</SubmitBtn>
     </>
   )
 }

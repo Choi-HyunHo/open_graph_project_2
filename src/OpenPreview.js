@@ -10,7 +10,7 @@ const OpenPreview = (data) => {
   console.log(data)
   return (
     <Container>
-      <LinkPreview url={data.url} width="450px" height="300px"></LinkPreview>
+      <LinkPreview url={data.data} width="450px" height="300px"></LinkPreview>
     </Container>
   )
 }
