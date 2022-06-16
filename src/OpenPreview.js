@@ -25,6 +25,7 @@ const Desc = styled.span`
 
 const Url = styled.span`
   font-size: 14px;
+  display: block;
 `
 
 const Img = styled.img`
@@ -44,7 +45,6 @@ const OpenPreview = (data) => {
     setUrl(data.data.url)
     setImage(data.data.image)
     setDescription(data.data.description)
-    console.log(data.data.url)
 
     if (data.data) {
       setFlag(true)

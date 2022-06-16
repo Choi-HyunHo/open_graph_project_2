@@ -13,5 +13,6 @@ export const getOpenGraph = async (data) => {
     .then((response) => {
       return response
     })
+  console.log(data)
   return response
 }
