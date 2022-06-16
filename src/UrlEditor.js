@@ -42,12 +42,6 @@ const UrlEditor = ({ onCreate }) => {
   const [urlData, setUrlData] = useState('')
 
   const handleSubmit = () => {
-    // getOpenGraph(urlData).then((response) => {
-    //   onCreate(response.data)
-    //   console.log(urlData)
-    //   return null
-    // })
-
     getOpenGraph(urlData).then((response) => {
       if (response.data === '') {
         alert('URL 전부를 입력하세요')

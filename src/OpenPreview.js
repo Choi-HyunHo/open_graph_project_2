@@ -4,18 +4,22 @@ import { useState, useEffect } from 'react'
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  width: 20vw;
+  margin: 50px auto 0px auto;
 `
 const UrlContainer = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #c8c8c8;
   box-shadow: 0px 15px 20px rgba(128, 128, 128, 0.4);
+  padding: 20px;
+  border-radius: 30px;
 `
 
 const Title = styled.h4`
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 `
 
 const Desc = styled.span`
@@ -23,14 +27,15 @@ const Desc = styled.span`
   margin-bottom: 10px;
 `
 
+const Img = styled.img`
+  width: 350px;
+  height: 200px;
+`
+
 const Url = styled.span`
   font-size: 14px;
   display: block;
-`
-
-const Img = styled.img`
-  width: 430px;
-  height: 200px;
+  margin: 20px 0 0 0;
 `
 
 const OpenPreview = (data) => {
@@ -58,16 +63,14 @@ const OpenPreview = (data) => {
   return (
     <>
       <Container>
-        <UrlContainer>
-          {flag && (
-            <div>
-              <Img src={image} />
-              <Title>{title}</Title>
-              <Desc>{description}</Desc>
-              <Url>{url}</Url>
-            </div>
-          )}
-        </UrlContainer>
+        {flag && (
+          <UrlContainer>
+            <Img src={image} />
+            <Title>{title}</Title>
+            <Desc>{description}</Desc>
+            <Url>{url}</Url>
+          </UrlContainer>
+        )}
       </Container>
     </>
   )
