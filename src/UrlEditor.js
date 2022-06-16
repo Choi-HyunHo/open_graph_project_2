@@ -44,7 +44,7 @@ const UrlEditor = ({ onCreate }) => {
   const handleSubmit = () => {
     getOpenGraph(urlData).then((response) => {
       if (response.data === '') {
-        alert('URL 전부를 입력하세요')
+        alert('URL 전부 입력하세요')
       } else {
         onCreate(response.data)
       }
