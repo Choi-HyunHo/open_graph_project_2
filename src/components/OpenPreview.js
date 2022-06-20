@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 
-// import Resize from './Resize'
+import Resize from './Resize'
 
 const Container = styled.div`
   display: flex;
@@ -61,14 +61,15 @@ const OpenPreview = (data) => {
   }, [data])
 
   console.log(data)
+  console.log(data.data.url)
 
   return (
     <>
       <Container>
         {flag && (
           <UrlContainer>
-            <Img src={image} />
-            {/*<Resize src={image} width={100} height={100}></Resize>*/}
+            {/*<Img src={image} />*/}
+            <Resize src={image} width={60} height={100}></Resize>
             <Title>{title}</Title>
             <Desc>{description}</Desc>
             <Url>{url}</Url>

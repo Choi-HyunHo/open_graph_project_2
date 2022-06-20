@@ -1,10 +1,11 @@
 import './App.css'
-import Header from './Header'
-import Title from './Title'
-import User from './User'
-import UrlEditor from './UrlEditor'
+import Header from './components/Header'
+import Title from './components/Title'
+import User from './components/User'
+import UrlEditor from './components/UrlEditor'
+import OpenPreview from './components/OpenPreview'
+
 import { useState } from 'react'
-import OpenPreview from './OpenPreview'
 
 function App() {
   const [data, setData] = useState('')

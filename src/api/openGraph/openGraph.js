@@ -2,6 +2,7 @@ import { testinstance } from '..'
 
 export const getOpenGraph = async (data) => {
   const url = `/getOpenGraph?baseURL=${data}`
+
   const response = await testinstance
     .get(url, null, {
       headers: {

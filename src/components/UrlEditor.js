@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { getOpenGraph } from './api/openGraph/openGraph'
+import { getOpenGraph } from '../api/openGraph/openGraph'
 
 const UrlInputContainer = styled.div`
   margin: 30px 0 0 0;

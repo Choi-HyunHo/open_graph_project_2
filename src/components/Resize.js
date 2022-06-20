@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 
 const Resize = ({ src, width, height }) => {
+  // const [loading, setLoading] = useState(false);
+  const [attr, setAttr] = useState({})
+  // const [hasError, setHasError] = useState(false)
+  // const [logoError, setLogoError] = useState(false)
+
   useEffect(() => {
     const img = new Image()
     img.src = src
@@ -153,8 +158,14 @@ const Resize = ({ src, width, height }) => {
       // createImageBitmap(img, 0, 0, 32, 32);
       // createImageBitmap(img, 32, 0, 32, 32);
     }
-    img.onerror = () => {}
+    img.onerror = () => {
+      setAttr({ width: 100 })
+      //setHasError(true)
+      //setLoading(true);
+    }
   }, [height, src, width])
+
+  return <img src={src} alt="" {...attr}></img>
 }
 
 Resize.defaultProps = {
