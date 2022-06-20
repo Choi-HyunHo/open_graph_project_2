@@ -8,6 +8,7 @@ import OpenPreview from './components/OpenPreview'
 import { useState } from 'react'
 
 function App() {
+  // OpenPreview 로 전달되는 데이터
   const [data, setData] = useState('')
 
   const onCreate = (urlData) => {

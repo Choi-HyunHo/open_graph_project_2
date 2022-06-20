@@ -69,7 +69,7 @@ const OpenPreview = (data) => {
         {flag && (
           <UrlContainer>
             {/*<Img src={image} />*/}
-            <Resize src={image} width={60} height={100}></Resize>
+            <Resize src={image} width={350} height={200}></Resize>
             <Title>{title}</Title>
             <Desc>{description}</Desc>
             <Url>{url}</Url>
