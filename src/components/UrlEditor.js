@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import styled from 'styled-components'
-import { getOpenGraph } from '../api/openGraph/openGraph'
+// import { useEffect } from 'react'
+import { useState } from 'react';
+import styled from 'styled-components';
+import { getOpenGraph } from '../api/openGraph/openGraph';
 
 const UrlInputContainer = styled.div`
   margin: 30px 0 0 0;
   display: flex;
   justify-content: center;
-`
+`;
 
 const UrlInputStyle = styled.input`
   width: 35vw;
@@ -18,7 +19,7 @@ const UrlInputStyle = styled.input`
   &::placeholder {
     font-size: 20px;
   }
-`
+`;
 
 const SubmitBtn = styled.button`
   margin-left: 30px;
@@ -35,21 +36,33 @@ const SubmitBtn = styled.button`
     transform: translateY(-7px);
     box-shadow: 0px 15px 20px rgba(128, 128, 128, 0.4);
   }
-`
+`;
 
 const UrlEditor = ({ onCreate }) => {
   // URL data
-  const [urlData, setUrlData] = useState('')
+  const [urlData, setUrlData] = useState('');
 
   const handleSubmit = () => {
     getOpenGraph(urlData).then((response) => {
       if (response.data === '') {
-        alert('URL 전부 입력하세요')
+        alert('URL 전부 입력하세요');
       } else {
-        onCreate(response.data)
+        onCreate(response.data);
       }
-    })
-  }
+    });
+  };
+
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      getOpenGraph(urlData).then((response) => {
+        if (response.data === '') {
+          alert('URL 전부 입력하세요');
+        } else {
+          onCreate(response.data);
+        }
+      });
+    }
+  };
 
   return (
     <>
@@ -59,13 +72,14 @@ const UrlEditor = ({ onCreate }) => {
           placeholder="https://"
           value={urlData}
           onChange={(e) => {
-            setUrlData(e.target.value)
+            setUrlData(e.target.value);
           }}
+          onKeyDown={handleEnter}
         />
       </UrlInputContainer>
       <SubmitBtn onClick={handleSubmit}>확인</SubmitBtn>
     </>
-  )
-}
+  );
+};
 
-export default UrlEditor
+export default UrlEditor;

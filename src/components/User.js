@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const UserContainer = styled.div`
   display: flex;
@@ -6,11 +6,11 @@ const UserContainer = styled.div`
   align-items: center;
   border-bottom: 1px solid #e2e2e2;
   padding: 16px;
-`
+`;
 
 const UserInfo = styled.div`
   margin: 0 5px;
-`
+`;
 
 const User = ({ left, right }) => {
   return (
@@ -22,7 +22,7 @@ const User = ({ left, right }) => {
         <h4>{right}</h4>
       </UserInfo>
     </UserContainer>
-  )
-}
+  );
+};
 
-export default User
+export default User;

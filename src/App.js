@@ -19,7 +19,7 @@ function App() {
     <>
       <Header left={'<'} center={'URL 등록'} right={'>'}></Header>
       <User left={'밝은_코브라'} right={'🔻'} />
-      <Title></Title>
+      <Title />
       <UrlEditor onCreate={onCreate}></UrlEditor>
       <OpenPreview data={data}></OpenPreview>
     </>
