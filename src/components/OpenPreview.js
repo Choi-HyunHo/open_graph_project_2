@@ -40,10 +40,6 @@ const OpenPreview = (data) => {
     } else {
       setFlag(false);
     }
-
-    if (data.data.url === null) {
-      alert('이미지를 가져올 수 없습니다.');
-    }
   }, [data]);
 
   console.log(data);

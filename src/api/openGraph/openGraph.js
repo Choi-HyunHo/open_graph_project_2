@@ -1,9 +1,9 @@
-import { testinstance } from '..'
+import { instance ,testinstance } from '..'
 
 export const getOpenGraph = async (data) => {
   const url = `/getOpenGraph?baseURL=${data}`
 
-  const Response = await testinstance
+  const Response = await instance
     .get(url, null, {
       headers: {
         Authorization: 'Basic cm96ZXVzOnJvemV1czEyMyE=',
