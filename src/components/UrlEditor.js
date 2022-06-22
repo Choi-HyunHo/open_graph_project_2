@@ -6,6 +6,7 @@ import { getOpenGraph } from '../api/openGraph/openGraph';
 const UrlInputContainer = styled.div`
   margin: 30px 0 0 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 `;
 
