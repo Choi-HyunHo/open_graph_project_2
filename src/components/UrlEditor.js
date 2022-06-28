@@ -17,13 +17,27 @@ const UrlInputStyle = styled.input`
   border-bottom: 1px solid black;
   outline: none;
   font-size: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
   &::placeholder {
     font-size: 20px;
   }
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+const BtnBox = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const SubmitBtn = styled.button`
-  margin-left: 30px;
+  text-align: center;
   margin-top: 30px;
   width: 35vw;
   height: 5vh;
@@ -36,6 +50,14 @@ const SubmitBtn = styled.button`
   &:hover {
     transform: translateY(-7px);
     box-shadow: 0px 15px 20px rgba(128, 128, 128, 0.4);
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
   }
 `;
 
@@ -78,7 +100,9 @@ const UrlEditor = ({ onCreate }) => {
           onKeyDown={handleEnter}
         />
       </UrlInputContainer>
-      <SubmitBtn onClick={handleSubmit}>확인</SubmitBtn>
+      <BtnBox>
+        <SubmitBtn onClick={handleSubmit}>확인</SubmitBtn>
+      </BtnBox>
     </>
   );
 };

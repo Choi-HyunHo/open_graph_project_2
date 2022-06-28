@@ -18,3 +18,14 @@ body {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+#root {
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  #root {
+    width: 100%;
+  }
+}
