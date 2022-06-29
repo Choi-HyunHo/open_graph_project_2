@@ -6,6 +6,9 @@ import ImgTwo from './ImgTwo';
 const ImgDiv = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 650px) {
+    width: 10%;
+  }
 `;
 
 const Resize = ({ src, width, height, title, desc, url }) => {

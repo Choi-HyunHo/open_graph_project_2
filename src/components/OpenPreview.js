@@ -18,6 +18,9 @@ const UrlContainer = styled.div`
   box-shadow: 0px 15px 20px rgba(128, 128, 128, 0.4);
   padding: 20px;
   border-radius: 30px;
+  @media (max-width: 650px) {
+    width: 90vw;
+  }
 `;
 
 const OpenPreview = (data) => {
