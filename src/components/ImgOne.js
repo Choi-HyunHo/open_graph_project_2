@@ -20,6 +20,7 @@ const ContentBox = styled.div`
   display: flex;
   flex-direction : column;
   @media (max-width: 650px) {
+    width : 180px;
     margin-left : 20px;
   }
 `
